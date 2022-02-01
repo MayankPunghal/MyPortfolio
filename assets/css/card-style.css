@@ -67,6 +67,7 @@ body {
   gap: 5rem;
   padding: 7rem;
   z-index: 2;
+  filter: invert();
 }
 
 .socicon {
