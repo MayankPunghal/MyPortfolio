@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  background-color: #111;
+  font-family: "Montserrat";
+}
+
+.container {
+  width: 700px;
+  height: 350px;
+  border-radius: 20px;
+  position: relative;
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.side {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+.content {
+  transform: translateZ(70px) scale(0.8);
+  line-height: 1.5em;
+}
+.content h1 {
+  position: relative;
+}
+.content p {
+  margin-top: 30px;
+  line-height: 2.5em;
+}
+.content h1:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 3px;
+  background-color: #fff;
+  width: 25rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.socials {
+  display: flex;
+  gap: 5rem;
+  padding: 7rem;
+  z-index: 2;
+}
+
+.socicon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.front {
+  z-index: 2;
+  background-size: cover;
+  background-image: url("../images/card-bg-temp/istockphoto-1355464336-612x612.jpg");
+}
+.back {
+  background-color: #333;
+  transform: rotateY(180deg);
+  z-index: 0;
+  background-image: url("../images/card-bg-temp/istockphoto-1355464281-170667b.jpg");
+}
+.container:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+@media screen and (max-width: 720px) {
+  .container {
+    display: flex;
+    width: 70%;
+    height: 80%;
+  }
+
+  .socials {
+    flex-direction: column;
+    padding-top: 2rem;
+    z-index: 2;
+    gap: 2rem;
+  }
+  .socicon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  .content h1:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 3px;
+    background-color: #fff;
+    width: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
