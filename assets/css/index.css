@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  font-size: 16px;
+}
+
+body,
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: -4em;
+  font-family: "Be Vietnam", sans-serif;
+  height: 100vh;
+}
+
+a {
+  position: flex;
+  text-align: center;
+  justify-items: space-around;
+  z-index: 3;
+  font-size: 200px;
+  font-weight: 1000;
+  background-image: url("../images/bg.gif");
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
